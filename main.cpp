@@ -23,8 +23,15 @@ int main()
     while (true) {
     // Initialise the digital pin LED1 as an output
         int num;
-        cout<<"Ingrese el numero del 0-9: \n"<<endl;
-        cin>>num;
+        do {
+        cout << "Ingrese un número entre 0 y 9: ";
+        cin >> num;
+
+        if (num < 0 || num > 9) {
+            cout << "Número fuera del rango. Por favor, ingrese un número entre 0 y 9." << endl;
+        }
+    } while (num < 0 || num > 9);
+
         switch (num) {
             case 0:
                 myLeads.write(63);
@@ -56,9 +63,7 @@ int main()
             case 9:
                 myLeads.write(111);
                 break;
-            default:
-                cout<<"Numero impedido \n"<<endl;
-                break;
+            
 
         }
         ThisThread::sleep_for(BLINKING_RATE);
