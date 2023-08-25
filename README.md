@@ -1,5 +1,11 @@
 ![](./resources/official_armmbed_example_badge.png)
 # Blinky Mbed OS example
+#Realizado por Camilo Valencia y Juan Esteban Castaño
+
+*Lo que se hizo fue inicializar un BusOut para poder tener el control de las 8 entradas en 1 solo objeto
+*Se pide por consola el numero del 0-9 al usuario en un ciclo do-while para que si se sale de ese intervalo lo vuelva a preguntar.
+*Con un switch case se controla la accion dependiendo del numero ingresado
+*la funcion .write() acepta un entero, por lo que es necesario convertir de binario a decimal para la comunicacion
 
 The example project is part of the [Arm Mbed OS Official Examples](https://os.mbed.com/code/) and is the [getting started example for Mbed OS](https://os.mbed.com/docs/mbed-os/latest/quick-start/index.html). It contains an application that repeatedly blinks an LED on supported [Mbed boards](https://os.mbed.com/platforms/).
 
