@@ -12,12 +12,13 @@
 UnbufferedSerial pc(USBTX,USBRX,9600);
 using namespace std;
 
-BusOut myLeads(D2,D3,D4,D5,D6,D7,D8,D9);
+
 
 
 
 int main()
 {
+    BusOut myLeads(D2,D3,D4,D5,D6,D7,D8,D9);
     
     while (true) {
     // Initialise the digital pin LED1 as an output
